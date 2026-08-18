@@ -2,9 +2,9 @@
 
 namespace Copain\LaravelMailDashboard\Tests;
 
+use Copain\LaravelMailDashboard\LaravelMailDashboardServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Copain\LaravelMailDashboard\LaravelMailDashboardServiceProvider;
 
 class TestCase extends Orchestra
 {

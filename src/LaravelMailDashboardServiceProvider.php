@@ -2,9 +2,9 @@
 
 namespace Copain\LaravelMailDashboard;
 
+use Copain\LaravelMailDashboard\Commands\LaravelMailDashboardCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Copain\LaravelMailDashboard\Commands\LaravelMailDashboardCommand;
 
 class LaravelMailDashboardServiceProvider extends PackageServiceProvider
 {
