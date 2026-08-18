@@ -15,3 +15,9 @@ parameters:
         -
             identifier: larastan.noEnvCallsOutsideOfConfig
             path: config/mail-dashboard.php
+        # The "mail-dashboard::" view namespace is registered at runtime by
+        # the service provider, so Larastan cannot resolve it statically.
+        -
+            message: '#Parameter \#1 \$view of function view expects view-string#'
+            path: src/Http/Controllers/DashboardController.php
+            reportUnmatched: false
