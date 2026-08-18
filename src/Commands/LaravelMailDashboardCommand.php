@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Copain\LaravelMailDashboard\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelMailDashboardCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-mail-dashboard';
 
     public $description = 'My command';
 
