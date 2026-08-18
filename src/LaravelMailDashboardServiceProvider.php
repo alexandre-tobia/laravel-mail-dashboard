@@ -2,7 +2,9 @@
 
 namespace Copain\LaravelMailDashboard;
 
-use Copain\LaravelMailDashboard\Commands\LaravelMailDashboardCommand;
+use Copain\LaravelMailDashboard\Listeners\StoreOutgoingEmail;
+use Illuminate\Mail\Events\MessageSent;
+use Illuminate\Support\Facades\Event;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -19,7 +21,11 @@ class LaravelMailDashboardServiceProvider extends PackageServiceProvider
             ->name('laravel-mail-dashboard')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_laravel_mail_dashboard_table')
-            ->hasCommand(LaravelMailDashboardCommand::class);
+            ->hasRoute('web');
+    }
+
+    public function packageBooted(): void
+    {
+        Event::listen(MessageSent::class, StoreOutgoingEmail::class);
     }
 }

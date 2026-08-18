@@ -6,5 +6,12 @@ parameters:
     paths:
         - src
         - config
-        - database
+        - routes
     tmpDir: build/phpstan
+    ignoreErrors:
+        # This is the package's config file: it is published into the host
+        # application's config directory, where env() calls are the norm.
+        # Larastan only recognises the application's own config path.
+        -
+            identifier: larastan.noEnvCallsOutsideOfConfig
+            path: config/mail-dashboard.php

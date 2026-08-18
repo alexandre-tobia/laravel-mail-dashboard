@@ -1,6 +1,6 @@
 {
     "name": "copain/laravel-mail-dashboard",
-    "description": "Dashboard for Mail using the Log Driver",
+    "description": "A local mail dashboard for Laravel: captures every outgoing email and lets you browse them in a React UI",
     "keywords": [
         "Copain",
         "laravel",
@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Copain\\LaravelMailDashboard\\": "src/",
-            "Copain\\LaravelMailDashboard\\Database\\Factories\\": "database/factories/"
+            "Copain\\LaravelMailDashboard\\": "src/"
         }
     },
     "autoload-dev": {
@@ -63,10 +62,7 @@
         "laravel": {
             "providers": [
                 "Copain\\LaravelMailDashboard\\LaravelMailDashboardServiceProvider"
-            ],
-            "aliases": {
-                "LaravelMailDashboard": "Copain\\LaravelMailDashboard\\Facades\\LaravelMailDashboard"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
